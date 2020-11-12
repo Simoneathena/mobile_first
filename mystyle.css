@@ -1,0 +1,131 @@
+/* ------ Universal ------ */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+a {
+	color:inherit;
+	text-decoration: none;
+}
+:root {
+	/* Gradient colors */
+	--bg1: rgba(0, 144, 0, 0.79);
+	--bg2: rgba(0, 75, 0, 0);
+	--bg3: #000000;
+	/* text bg */
+	--textbg1:rgba(66, 66, 66, 0.56);
+
+	/* Text colors */
+	--header2: #ffff00;
+    --p1: #ffff00;
+}
+
+/*------ Text stylings ------ */
+.header2 {
+    font-size:2rem;
+    color: var(--header2);
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 200;
+}
+.header3 {
+    font-size:1.7rem;
+    color: var(--header2);
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 200;
+}
+.p1 {
+    font-size:1.2rem;
+    color: var(--p1);
+    font-family: 'Noto Serif', serif;
+}
+.p2 {
+    font-size:1.4rem;
+    color: var(--p1);
+    font-family: 'Noto Serif', serif;
+}
+.priser {
+    font-size:1.3rem;
+    color: var(--p1);
+    font-family: 'Noto Serif', serif;
+}
+/*------ Header ------*/
+header {
+    text-align: center;
+    padding-top:16px;
+}
+#logo {
+    width:200px;
+}
+
+/*------ Footer -------*/
+
+
+/*------ Index --------*/
+.index_wrap {
+	min-height: 100vh;
+	/*background-image:linear-gradient(to right, var(--bg1),var(--bg2));*/
+	background-color: var(--bg3);
+    background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+}
+.index_wrap_inner {
+    min-height: 100vh;
+    background-image:linear-gradient(to right, var(--bg1), var(--bg2));
+}
+.index_main {
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+    max-width:1400px;
+    margin:0 auto;
+}
+.index_main {
+	padding:16px;
+}
+.tider_index {
+    width:100%;
+    max-width:500px;
+    margin:16px auto 0 auto;
+}
+.tider_index td {
+    width:50%;
+}
+.accordion {
+    background-color: var(--textbg1);
+    margin:8px 0 8px 0;
+    padding:32px 16px 32px 16px;
+    border-radius: 10px;
+    text-align: center;
+}
+.accordion_content {
+    height:0;
+    transition:500ms ease-in-out;
+    overflow:hidden;
+    padding-top: 8px;
+    opacity: 0;
+}
+.accordion_content:target {
+    height:auto;
+    opacity: 1;
+}
+.accordion_content img {
+    width:100%;
+    max-width:300px;
+    margin:16px auto;
+}
+
+@media only screen and (min-width:800px){
+    .index_main {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap:wrap;
+    }
+    .accordion {
+        width:45%;
+    }
+    .accordion_content {
+        height: auto;
+        opacity:1;
+    }
+}
